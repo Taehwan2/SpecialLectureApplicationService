@@ -6,6 +6,8 @@ import com.example.special.lecture.application.user.db.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "lecture")
 @AllArgsConstructor
@@ -24,13 +26,14 @@ public class Lecture {
 
     private Long currentLectureCapacity;
 
-
+    private LocalDateTime applyDate;
     public static LectureResponse entityToResponse(Lecture lecture){
         return LectureResponse.builder()
                 .lectureId(lecture.getLectureId())
                 .lectureCapacity(lecture.getLectureCapacity())
                 .currentLectureCapacity(lecture.getCurrentLectureCapacity())
                 .lectureName(lecture.getLectureName())
+                .applyDate(lecture.applyDate)
                 .build();
     }
 }

@@ -16,6 +16,6 @@ public interface LectureService {
 
     Lecture postLecture(Lecture lecture);
 
-    Lecture changeLectureCapacity(Long lectureId);
+    Lecture changeLectureCapacity(Long lectureId) throws IllegalAccessException;
 
 }
