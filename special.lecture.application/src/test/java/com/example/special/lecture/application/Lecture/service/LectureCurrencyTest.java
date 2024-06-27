@@ -54,7 +54,7 @@ public class LectureCurrencyTest {
                 executorService.execute(() -> {
                     try {
                         var findlecture = lectureService.findLectureById(1L);
-                        ;                        lectureService.changeLectureCapacity(findlecture,LocalDateTime.now());
+                        lectureService.changeLectureCapacity(findlecture,LocalDateTime.now());
                         applyHistoryService.saveApplyHistory(new ApplyHistory(userId, userId, 1L, LocalDateTime.now()));
                     } catch (IllegalAccessException e) {
                         throw new RuntimeException(e);
