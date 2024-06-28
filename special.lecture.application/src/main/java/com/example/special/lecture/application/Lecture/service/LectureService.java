@@ -1,6 +1,10 @@
 package com.example.special.lecture.application.Lecture.service;
 
 import com.example.special.lecture.application.Lecture.db.Lecture;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 public interface LectureService {
     /*TODO
@@ -15,7 +19,9 @@ public interface LectureService {
     Lecture findLectureById(Long lectureId);
 
     Lecture postLecture(Lecture lecture);
+    List<Lecture> findLectures();
 
-    Lecture changeLectureCapacity(Long lectureId) throws IllegalAccessException;
+    Lecture changeLectureCapacity(Lecture lectureId,LocalDateTime localDateTime) throws IllegalAccessException, ObjectOptimisticLockingFailureException;
+
 
 }
