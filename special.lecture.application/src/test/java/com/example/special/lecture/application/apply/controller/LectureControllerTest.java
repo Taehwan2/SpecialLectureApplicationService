@@ -88,7 +88,7 @@ public class LectureControllerTest {
 
         given(applyFacade.applySpecialLecture(any(ApplyRequest.class))).willReturn(true);
 
-        mockMvc.perform(patch("/lectures")
+        mockMvc.perform(post("/lectures")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(jsonRequest))
                 .andExpect(status().isOk())

@@ -41,9 +41,10 @@ public class LectureServiceImpl implements LectureService {
         try {
             return postLecture(findLecture);
         } catch (ObjectOptimisticLockingFailureException ex) {
-            throw new ObjectOptimisticLockingFailureException("Optimistic lock exception", new RuntimeException("kk"));
+          log.info("zzz");
         }
 
+        return findLecture;
     }
 
 

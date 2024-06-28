@@ -34,7 +34,7 @@ public class LectureController {
     }
 
 
-    @PatchMapping("")
+    @PostMapping("")
     public Boolean applySpecialLecture(@RequestBody  ApplyRequest applyRequest) throws IllegalAccessException {
         return applyService.applySpecialLecture(applyRequest);
     }
