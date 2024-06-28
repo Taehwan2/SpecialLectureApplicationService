@@ -4,3 +4,5 @@
 
 
 [capstone.pdf](https://github.com/user-attachments/files/16024676/capstone.pdf)
+
+https://dbdiagram.io/d/capstone-6423bbc85758ac5f1724f77b
